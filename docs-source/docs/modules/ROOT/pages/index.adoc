@@ -6,6 +6,8 @@
 include::partial$include.adoc[]
 :imagesdir: assets/images
 
+Version1
+
 The rapid advance and adoption of the Kubernetes ecosystem is finally delivering on the devops promise of giving control and responsibility to dev teams over the lifecycle of their applications.
 Kubernetes also increases the complexity that developers need to manage to deliver an end-to-end application.
 Cloudflow alleviates that pain for distributed streaming applications, which are known to be fairly more complex than the average front-end or microservice deployment.
