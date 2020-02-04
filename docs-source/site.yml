@@ -4,8 +4,8 @@ site:
   
 content:
   sources:
-  - url: ./../
-    branches: [HEAD]
+  - url: git@github.com:skyluc/cloudflow-docs
+    branches: [test-submodule]
     start-path: docs-source/docs 
   - url: ./../
     branches: [HEAD]
