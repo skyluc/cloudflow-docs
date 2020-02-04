@@ -55,7 +55,7 @@ In Scala:
 +
 [source,scala]
 ----
-include::ROOT:example$sensor-data-scala/src/main/scala/sensordata/SensorDataHttpIngress.scala[]
+include::version1@docexamples:ROOT:example$sensor-data-scala/src/main/scala/sensordata/SensorDataHttpIngress.scala[]
 ----
 
 Java::
