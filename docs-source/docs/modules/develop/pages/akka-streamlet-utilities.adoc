@@ -55,7 +55,7 @@ In Scala:
 +
 [source,scala]
 ----
-include::version1@docexamples:ROOT:example$test.txt[]
+include::ROOT:example$examples/test.txt[]
 ----
 
 Java::
