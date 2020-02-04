@@ -7,6 +7,5 @@ docs-source/test-ui-site.yml
 target/
 output/
 build/
-docs-source/docs/modules/ROOT/examples/
 ##
 view.sh

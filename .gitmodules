@@ -1,0 +1,3 @@
+[submodule "docs-source/docs/modules/ROOT/examples"]
+	path = docs-source/docs/modules/ROOT/examples
+	url = git@github.com:skyluc/cloudflow
