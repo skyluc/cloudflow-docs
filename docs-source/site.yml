@@ -13,8 +13,8 @@ content:
   - url: ./../
     branches: [HEAD]
     start-path: shared-content-source/docs
-  - url: git@github.com:skyluc/cloudflow
-    branches: [feature/doc-snippets]
+  - url: git@github.com:lightbend/cloudflow
+    branches: [master]
     start-path: examples/snippets
 
 ui: 
