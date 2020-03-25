@@ -16,4 +16,5 @@
 :minimum-sbt-version:                      0.13.7
 :latest-sbt-version: 
 
-include::master@shared-content:ROOT:partial$include.adoc[]
+:shared-content-version: 1.3.1
+include::{shared-content-version}@shared-content:ROOT:partial$include.adoc[]
