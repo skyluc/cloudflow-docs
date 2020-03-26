@@ -6,6 +6,8 @@
 include::partial$include.adoc[]
 :imagesdir: assets/images
 
+version master
+
 Cloudflow enables you to quickly develop distributed streaming applications to deploy on Kubernetes. The rapid advance and adoption of the Kubernetes ecosystem is delivering on the devops promise of giving control and responsibility to dev teams over the lifecycle of their applications. However, use of Kubernetes also increases the complexity of delivering end-to-end applications. Cloudflow alleviates that pain for distributed streaming applications, which are often far more complex than typical front-end or microservice deployments.
 
 link:https://www.youtube.com/watch?v=-9pVwCkkE1I[Watch on YouTube ,role=yt-widget]
