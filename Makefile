@@ -34,6 +34,40 @@ html: clean
 		docs-source/site.yml
 	@echo "Done"
 
+html-with-current: clean
+	# copy of cloudflow-docs
+	git cl . --branch ${current_version} --single-branch ${work_dir}/cloudflow-docs
+
+	# change version to current in the copy
+	awk ' \
+		/version:/ {print "version: current"; next} \
+		{print} \
+	'	${work_dir}/cloudflow-docs/docs-source/docs/antora.yml > ${work_dir}/cloudflow-docs/docs-source/docs/antora.yml.tmp
+	mv ${work_dir}/cloudflow-docs/docs-source/docs/antora.yml.tmp ${work_dir}/cloudflow-docs/docs-source/docs/antora.yml
+
+	# create extended site.yml
+	awk ' \
+		/sources:/ { \
+			print; \
+			print "  - url: ./../"; \
+			print "    branches: [HEAD]"; \
+			print "    start-path: ${work_dir}/cloudflow-docs/docs-source/docs "; \
+			next; \
+		} \
+		{print} \
+	' docs-source/site.yml > ${work_dir}/site.yml
+
+	docker run \
+		-u $(shell id -u):$(shell id -g) \
+		--privileged \
+		-v ${ROOT_DIR}:/antora \
+		--rm \
+		-t ${antora_docker_image}:${antora_docker_image_tag} \
+		--cache-dir=./.cache/antora \
+		--stacktrace \
+		${work_dir}/site.yml
+	@echo "Done"
+
 html-author-mode: clean
 	docker run \
 		-u $(shell id -u):$(shell id -g) \
